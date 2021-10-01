@@ -6,9 +6,9 @@ public class Post {
 
 	private int id;
 	private String userId;
-	private String userNickName;
+	private String subject;
 	private String content;
-	private String location;
+	private String imagePath;
 	private Date createdAt;
 	private Date updatedAt;
 	
@@ -24,11 +24,11 @@ public class Post {
 	public void setUserId(String userId) {
 		this.userId = userId;
 	}
-	public String getUserNickName() {
-		return userNickName;
+	public String getSubject() {
+		return subject;
 	}
-	public void setUserNickName(String userNickName) {
-		this.userNickName = userNickName;
+	public void setSubject(String subject) {
+		this.subject = subject;
 	}
 	public String getContent() {
 		return content;
@@ -36,11 +36,11 @@ public class Post {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getLocation() {
-		return location;
+	public String getImagePath() {
+		return imagePath;
 	}
-	public void setLocation(String location) {
-		this.location = location;
+	public void setImagePath(String imagePath) {
+		this.imagePath = imagePath;
 	}
 	public Date getCreatedAt() {
 		return createdAt;
@@ -54,4 +54,5 @@ public class Post {
 	public void setUpdatedAt(Date updatedAt) {
 		this.updatedAt = updatedAt;
 	}
+	
 }
