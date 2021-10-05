@@ -56,7 +56,8 @@
 			if (file != '') {
 				// console.log(file.split('.')); // 파일명을 . 기준으로 자른다. (배열에 저장)
 				let ext = file.split('.').pop().toLowerCase(); // pop -> 스택에서 뽑을때의 용어, toLowerCase -> 소문자로 변경
-				if ($.inArray(ext, ['jpg, jpeg, png, gif']) == -1) {
+				console.log('==>> file : ' + ext);
+				if ($.inArray(ext, ['jpg', 'jpeg', 'png', 'gif']) == -1) {
 					alert('이미지 파일만 업로드 할 수 있습니다.');
 					$('#file').val(''); // 잘못된 파일을 비운다.
 					return;
@@ -67,7 +68,7 @@
 			let formData = new FormData(); // 자바스크립트에서 제공해주는 객체
 			formData.append('subject', subject);
 			formData.append('content', content);
-			formData.append('file', $('file')[0].files[0]);
+			formData.append('file', $('#file')[0].files[0]);
 			
 			$.ajax({
 				type: 'post'
@@ -79,6 +80,7 @@
 				, success : function(data) {
 					if (data.result == 'success') {
 						alert('메모가 저장되었습니다.');
+						location.href="/post/post_list_view";
 					}
 				}
 				, error : function(e) {
