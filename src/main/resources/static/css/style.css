@@ -12,10 +12,11 @@ header .login-info {
 	height:100px;
 }
 
-.contents {
-	height:500px;
-}
+/* .contents { */
+/* 	height:500px; */
+/* } */
 
 footer {
+	margin-top: 50px;
 	height:100px;
 }
