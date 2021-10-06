@@ -17,4 +17,16 @@ public interface PostDAO {
 			, @Param("subject") String subject
 			, @Param("content") String content
 			, @Param("imagePath") String imagePath);
+	
+	
+	// "public List<Post> selectPostList(int userId);"에서 검색된 결과중 하나를 가져오기 때문에 "userId"를 제외해 주어도 된다.
+	public Post selectPost(int id);
+	
+	public void updatePost(
+			@Param("id") int id
+			, @Param("subject") String subject
+			, @Param("content") String content
+			, @Param("imagePath") String imagePath);
+	
+	public void deletePost(int id);
 }
